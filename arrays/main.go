@@ -25,4 +25,36 @@ func main() {
 	var numberList = [...]int{1, 3: 3, 4, 5, 6} // {1, 3: 3, 4, 5, 6} → this part is the array composite literal.
 	fmt.Println("Number List:", numberList)
 	fmt.Println("Length of number list:", len(numberList))
+
+	// multi dimensional arrays
+	var multiDimensionalArray [2][3]int
+
+	for i := range 2 {
+		for j := range 3 {
+			multiDimensionalArray[i][j] = i + j
+		}
+	}
+	fmt.Printf("multiDimensionalArray %v", multiDimensionalArray)
+
+	// arrays containing elements of different types
+	var arrayDiffTypes = [3]interface{}{"Hello", 23, true}
+	fmt.Println(arrayDiffTypes)
+
+	// array of structs
+	type User struct {
+		Name string
+		Age  int
+	}
+
+	var users = [4]User{
+		{"Alice", 30},
+		{"Bob", 25},
+		{"Charlie", 35},
+	}
+	users[3] = User{"David", 28} // Adding a new user to the array
+	fmt.Println("Users:", len(users))
+
+	digits := [...]int{10, 20, 30, 40}
+	fmt.Println(digits) // => [10 20 30 40]
+
 }
