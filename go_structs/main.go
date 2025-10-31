@@ -33,5 +33,6 @@ func main() {
 	user := User{"Vishnu", "vishnu@gmail.com", true, 22}
 	fmt.Println("User struct ", user)
 	fmt.Printf("User struct raw %+v ", user)
+	fmt.Println()
 
 }
